@@ -25,7 +25,7 @@ namespace libserlcdarduino
 
 class SerLcd16x2Arduino : public SoftwareSerial 
 {
-/*
+   /*
    Arduino sample code:
    ====================
     
@@ -50,11 +50,11 @@ class SerLcd16x2Arduino : public SoftwareSerial
       myLcd.Print(1,3,myString);           // print a string @ line 1, offset 3
       delay(1000);
     }
-   */
+    */
    
 public:
-	SerLcd16x2Arduino (int lcdpin);
-	/* 
+   SerLcd16x2Arduino (int lcdpin);
+    /* 
     Allocation function:
        
          - lcdpin:  specifies the Arduino pin connected to the lcd serial input
@@ -70,15 +70,15 @@ public:
     ex: myLcd.Home();
     */
     
-	void Clear();
-	/* 
+   void Clear();
+   /* 
     Clear the display:
               
     ex: myLcd.Clear();
     */
       
-	void ClearLine(int line);
-	/* 
+   void ClearLine(int line);
+   /* 
     Clear a line:
        - line: the line index (1 or 2)
               
@@ -95,16 +95,16 @@ public:
     ex: myLcd.ClearRange(1, 4, 2);
     */
     
-	void SetBrightness(int value=100);
-	/* 
+   void SetBrightness(int value=100);
+    /* 
     Sets the display brightness:
        - value: from 0 to 100
        
     ex: myLcd.SetBrightness(80);
     */
     
-	void MoveToStart(int line);
-	/* 
+   void MoveToStart(int line);
+    /* 
     Move the cursor at the beginning of the line:
        - line: the line index (1 or 2)
        
@@ -120,8 +120,8 @@ public:
     ex: myLcd.SetPosition(2,7);
     */
     
-	void SetDisplay(boolean DisplayOn=true, boolean CursorOn=false, boolean CursorBlinkOn=false);
-	/* 
+   void SetDisplay(boolean DisplayOn=true, boolean CursorOn=false, boolean CursorBlinkOn=false);
+   /* 
     Sets the display mode:
        - DisplayOn: whether the display is On or Off
        - CursorOn: whether the cursor line is displayed or not
@@ -129,9 +129,9 @@ public:
        
     ex: myLcd.SetDisplay(true,true, false);
     */
-	
-	void DisplayScrollRight(int value=1, int delayval=100);
-	/* 
+   
+   void DisplayScrollRight(int value=1, int delayval=100);
+   /* 
     Moves the display to the right.
        - value: displacement size
        - delayval: delay between each displacement (in ms)
@@ -218,7 +218,7 @@ public:
 
 
 private:
-	void LcdCommand(uint8_t, uint8_t);
+   void LcdCommand(uint8_t, uint8_t);
 
 };
 
